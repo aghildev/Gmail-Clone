@@ -1244,6 +1244,22 @@ box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
 	user-select: none;
 }
 
+.btn-icon-sm:hover{ 
+	transform: scale(2);
+	}
+	.btn-calendar{
+		animation: calendar 7s ease-in 0s 1 forwards;
+	}
+	@keyframes calendar {
+		0% {
+			height: 70px;
+			width: 70px;
+		}
+		100% {
+			height: 24px;
+			width: 24px;
+		}
+	}
 /* ==== MEDIA QUERIES (1200px, 1024px, 950px, 768px) ====  */
 
 /* ---- 1200px ----*/

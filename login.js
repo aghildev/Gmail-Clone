@@ -50,10 +50,15 @@ const login = async (event) => {
     if (data.user !== undefined) {
       console.log('Logged in successfully');
 
-       window.location.href = 'index.html?email=' + email;
+       window.location.href = 'main.html?email=' + email;
     } else {
-      console.log('Error:', data.message);
-        window.location.href = 'signup.html'
+      
+       
+        let errorModal = document.querySelector(".error_modal_login")
+        errorModal.style.display = "grid";
+        setTimeout(()=>{
+          window.location.href = 'index.html';
+        },2000)
     }
   } catch (error) {
     console.log('Error:', error);
