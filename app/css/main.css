@@ -259,7 +259,7 @@ body {
 	border-radius: 8px;
 	padding: 3px 8px;
 
-	-webkit-transition: -webkit-box-shadow 150ms ease;
+
 
 	transition: -webkit-box-shadow 150ms ease;
 
@@ -348,7 +348,7 @@ box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
 	overflow: hidden;
 	box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
 		0 1px 3px 1px rgba(60, 64, 67, 0.149);
-	-webkit-transition: -webkit-box-shadow 150ms ease;
+	
 	transition: -webkit-box-shadow 150ms ease;
 	-o-transition: box-shadow 150ms ease;
 	transition: box-shadow 150ms ease;
@@ -396,9 +396,6 @@ box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-flow: column;
 	flex-flow: column;
 	width: 100%;
 	margin: 0;
@@ -410,15 +407,8 @@ box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	-ms-flex-flow: row nowrap;
 	flex-flow: row nowrap;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 	color: var(--grey);
 	font-family: var(--font);
@@ -428,14 +418,7 @@ box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
 	padding: 0 12px 0 26px;
 	border-top-right-radius: 999px;
 	border-bottom-right-radius: 999px;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 	user-select: none;
-
-	-webkit-box-flex: 0;
-
-	-ms-flex: 0;
 
 	flex: 0;
 }
@@ -449,8 +432,6 @@ box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
 }
 
@@ -484,9 +465,6 @@ box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-flow: column;
 	flex-flow: column;
 	width: 100%;
 	margin: 0;
@@ -501,8 +479,6 @@ box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
 	margin-left: 12px;
 	opacity: 0;
@@ -520,9 +496,6 @@ box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
 	border-radius: 999px;
 	margin-top: 5px;
 	outline: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 	user-select: none;
 	opacity: 0.18;
 	cursor: row-resize;
@@ -535,9 +508,6 @@ box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
 	font-weight: 500;
 	letter-spacing: 0.25px;
 	padding: 0 12px 0 26px;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 	user-select: none;
 	margin: 10px 0;
 }
@@ -844,14 +814,22 @@ box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
 
 /* ==== MAIL CONTENT ==== */
 
-.content {
+.content,.content2 {
 	display: block;
 	margin-bottom: 16px;
 	overflow: hidden;
 	overflow-y: scroll;
-	height: 400px;
+	height: 100vh;
 }
-
+/* .content2{
+	display: none;
+} */
+.displaynone{
+	display: none;
+}
+.content2{
+	overflow-y:hidden;
+}
 .mail {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -1128,7 +1106,9 @@ box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
 	-ms-flex-align: start;
 	align-items: flex-start;
 	padding: 12px;
-	margin: 16px 0;
+	/* margin: 16px 0; */
+	position: fixed;
+	bottom: 0;
 }
 
 .footer-item {
@@ -1264,35 +1244,35 @@ box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
 
 /* ---- 1200px ----*/
 
-/* @media screen and (max-width: 1200px) {
+ @media screen and (max-width: 1200px) {
 	.message-default .message-subject {
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 25%;
 		flex: 0 0 25%;
 	}
-} */
+} 
 
 /* ---- 1024px ----*/
 
-/* @media screen and (max-width: 1024px) {
+ @media screen and (max-width: 1024px) {
 	.message-default .message-subject {
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 20%;
 		flex: 0 0 20%;
 	}
-} */
+} 
 
 /* ---- 950px ----*/
 
-/* @media screen and (max-width: 950px) {
+ @media screen and (max-width: 950px) {
 	.inbox-message-item {
 		-webkit-box-align: start;
 		-ms-flex-align: start;
 		align-items: flex-start;
 		height: auto;
-	} */
+	} 
 
-	/* .message-default {
+	 .message-default {
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		-ms-flex-flow: row wrap;
@@ -1300,8 +1280,8 @@ box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
 		white-space: nowrap;
 		padding-left: 10px;
 		margin: 10px 0;
-	} */
-/* 
+	} 
+
 	.inbox-message-item-options {
 		position: absolute;
 		background-color: transparent;
@@ -1385,11 +1365,11 @@ box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
 		-ms-flex: 0 1 auto;
 		flex: 0 1 auto;
 	}
-} */
+} 
 
 /* ---- 768px ----*/
 
-/* @media screen and (max-width: 768px) {
+ @media screen and (max-width: 768px) {
 	.inbox-menu-pagination {
 		max-width: 8ch;
 		white-space: nowrap;
@@ -1408,4 +1388,43 @@ box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
 		flex: 0 1 max-content;
 		padding-right: 32px;
 	}
-} */
+} 
+
+
+
+
+/* CSS */
+.logoutBtn {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button-24:active {
+  opacity: .5;
+}

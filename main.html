@@ -55,11 +55,11 @@
             <img src="/app/assets/icons/arrow_drop_down_black_24dp.svg" alt="Options" class="btn-icon btn-icon-alt">
           </button>
         </div>
-
+       
       </form>
-
+      
       <div class="header-group profile">
-
+        <button class="logoutBtn">Logout</button>
         <div class="icons">
           <button id="header-info" class="btn">
             <img src="/app/assets/icons/help_outline_black_24dp.svg" alt="Support" class="btn-icon btn-icon-alt">
@@ -104,7 +104,7 @@
       <div class="left-siderbar-label">
         <ul class="labels category-item-list">
 
-          <li class="category-item active">
+          <li class="category-item active inboxC">
             <div>
               <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
                 width="24px" fill="#000000">
@@ -147,14 +147,14 @@
             <span class="category-item-number"></span>
           </li>
 
-          <li class="category-item">
-            <div>
+          <li class="category-item" id="listall">
+            <div >
               <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
                 width="24px" fill="#000000">
                 <path d="M0 0h24v24H0z" fill="none" />
                 <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
               </svg>
-              <span class="category-item-title">Sent</span>
+              <span class="category-item-title" >Sent</span>
             </div>
             <span class="category-item-number"></span>
           </li>
@@ -636,6 +636,9 @@
           </footer>
 
         </div>
+        <div class="content2 displaynone">
+
+        </div>
 
       </div>
 
@@ -707,7 +710,7 @@
     </div>
   </div>
   <!-- Mail Compose modal -->
-       <button id = "listall">Post</button>
+       <!-- <button id = "listall">Post</button> -->
   </div>
 
   <script src="./main.js"></script>
