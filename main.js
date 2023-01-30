@@ -1,5 +1,5 @@
 const userEmail = new URL(window.location.href).searchParams.get('email');
-console.log(userEmail);
+
 const inboxBtn = document.querySelector(".inboxC")
 inboxBtn.addEventListener('click', () => {
   document.querySelector("#listall").classList.remove("active")
@@ -10,7 +10,7 @@ inboxBtn.addEventListener('click', () => {
 
 function showModal() {
   document.querySelector('.sendMail').style.display = 'flex';
-  console.log('showModal')
+
 }
 
 document.querySelector('.compose-btn').addEventListener('click', showModal);
@@ -19,7 +19,7 @@ const closeButton = document.querySelector(".sendMail__close");
 
 closeButton.addEventListener("click", function () {
   document.querySelector('.sendMail').style.display = "none";
-  console.log("clicked")
+ 
 });
 const sendEmail = async (e) => {
   e.preventDefault();
@@ -43,8 +43,8 @@ const sendEmail = async (e) => {
     console.log('Error:', error);
   }
 }
-
 document.querySelector('#sForm').addEventListener('submit', sendEmail)
+
 const listDetails = async (e) => {
   e.preventDefault();
   document.querySelector(".content").style.display = "none"
@@ -219,10 +219,10 @@ const listDetails = async (e) => {
   `
     }).join('');
 
-    //document.querySelector(".content2").innerHTML = emailTemplate;
+   
     document.querySelector(".content2").insertAdjacentHTML('afterbegin', emailTemplate);
     document.querySelector(".content2").classList.remove("displaynone");
-    //document.querySelector('#email-list').innerHTML = ;
+ 
     console.log(emailTemplate)
     console.log(data);
     console.log("got list")
